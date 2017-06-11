@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tatcTemp" ng-controller="contactController">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,8 @@
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+      <script src="app.js"></script>
+
   </head>
   <!-- navbar -->
   <body>
@@ -41,15 +43,23 @@
         </div>
     </div>
 
-
     <div id="content-wrapper">
     <!-- PAGE CONTENT -->
     <div class='home-page'>
+      <center><h2>COMING SOON</h2></center>
       <center><h1><span id="lettergap">TANDOOR</span> <br><span id="atthe">at the</span> CHAMBERS</h1></center>
-      <center><a href="#!/reservations"><button class="btn btn-lg">Reserve a table</button><button class="btn btn-lg">Menu</button></a></center>
+      <center><a><button class="btn btn-lg" data-toggle="modal" data-target="#visionModal">Our Vision</button>
+        <button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Find Us</button></a></center>
     </div>
     <!-- PAGE CONTENT -->
     </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid text-center myfooter">
+      Designed by <a href="http://virunee.co.uk.s3-website.eu-west-2.amazonaws.com/" target="_blank">Virunee</a>
+    </footer>
+
+    <!-- /FOOTER -->
 
     <script>
     $('#myCarousel').carousel({
@@ -57,7 +67,111 @@
     })
     </script>
 
-    <!-- footer -->
+    <!-- MODALS -->
+      <!-- Vision Modal -->
+    <div id="visionModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">OUR VISION</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <!-- /Vision modal -->
+
+    <!-- Contact modal -->
+    <div id="contactModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">FIND US</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-md-8">
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 51.626017, lng: 0.035804};
+
+        var mapProp= {
+          center:new google.maps.LatLng(51.626017,0.035804),
+          zoom:5,
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), mapProp);
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjOIrQ9-HdlnoD5aYav0NXH-bKZH_KPIk&callback=initMap">
+    </script>
+    <p class="address text-center">
+    The Bank Chambers<br>
+    188 Queens Road<br>
+    Buckhurst Hill<br>
+    Essex IG9 9BD</p>
+  </div>
+  <div class="col-md-4">
+
+    <h4>Drop us a message</h4>
+    <!-- CONTACT FORM -->
+    <form method="post" name="contactform" ng-submit="addMessage(messages)">
+    <div class="form-group">
+  <label for="usr">Name:</label>
+  <input type="text" class="form-control" id="usr" ng-model="messages.name">
+</div>
+<div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email"  ng-model="messages.email">
+  </div>
+<div class="form-group">
+  <label for="message">Message:</label>
+  <textarea class="form-control" rows="5" id="message" ng-model="messages.message"></textarea>
+</div>
+<button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
+
+<div class="alert" ng-show="contactform.$submitted">
+  <h4>Thanks</h4>
+  <p>We've received your message. We will endeavour to get back to you shortly!</p>
+  </div>
+
+</form>
+    <!-- /CONTACT FORM -->
+
+
+  </div>
+</div> <!-- /row -->
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<!-- /Contact modal -->
 
   </body>
 </html>

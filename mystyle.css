@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin:0px;
   padding: 0px;
   height:100%;
@@ -52,7 +52,8 @@ position:relative;
   align-items: center;
 }
 
-.btn {
+.home-page .btn {
+  display: inline-block;
   color: white;
   margin: 10px;
   padding-top: 15px;
@@ -65,20 +66,32 @@ position:relative;
   text-shadow: 1px 1px 3px black;
 }
 
-.btn:hover {
+.home-page .btn:hover {
   color: #dbb65c;
   border: 2px solid #dbb65c;
 }
 
 .home-page  h1 {
   display: inline-block;
-padding-top: 100px;
   font-family: 'Lato', sans-serif;
   color: #dbb65c;
   font-size: 8em;
   text-shadow: 1px 1px 10px black;
   text-align: center;
   vertical-align: middle;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+.home-page h2 {
+    padding-top: 15%;
+  display: inline-block;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+  text-align: center;
+  vertical-align: bottom;
+  letter-spacing: 10px;
 }
 
 .centre-page  span {
@@ -100,9 +113,11 @@ div .page-header h3 span {
   text-decoration: underline;
 }
 
-@media (max-width:770px) {
+@media (max-width:700px) {
+
   .home-page h1 {
     font-size: 5em;
+    text-transform: uppercase !important;
   }
   .collapsing, .in {background-color: rgb(61, 69, 90);}
   .tab-content>.active {background-color: rgba(61, 69, 90,0);}
@@ -114,6 +129,15 @@ div .page-header h3 span {
   .navbar .navbar-collapse {
     text-align: center;
     font-size: 0.7em;
+  }
+
+  #atthe{
+    bottom: -15px !important;
+    right: -5px !important;
+    text-transform: uppercase !important;
+  }
+  body {
+    font-size: 1em !important;
   }
 }
 
@@ -274,7 +298,55 @@ hr {
   right: -20px;
 }
 
-.home-page h1 {
-  padding-top: 15%;
-  line-height: 0.8;
+.myfooter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  /*background-color: #49526C;*/
+  z-index: 2;
+  letter-spacing: 10px;
+}
+
+.myfooter a {
+  color: #dbb65c;
+}
+
+.myfooter a:hover {
+  color: #A78941;
+  text-decoration: none;
+}
+
+.modal-content {
+  border-radius: 0px;
+  background-color: #49526C;
+  color: white;
+}
+
+.modal-header {
+  background-color: #3B4154;
+    border-color: #dbb65c;
+}
+
+.modal-title {
+  color: #dbb65c;
+}
+
+.close {
+  color:white;
+}
+
+.close:hover {
+  color:white;
+}
+
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
+.address {
+  margin-top: 20px;
 }
