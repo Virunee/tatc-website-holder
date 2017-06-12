@@ -16,15 +16,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="http://malsup.github.com/jquery.form.js"></script>
 
-    <script>
-        // wait for the DOM to be loaded
-        $(document).ready(function() {
-            // bind 'myForm' and provide a simple callback function
-            $('#myForm').ajaxForm(function() {
-                alert("Thank you for your comment!");
-            });
-        });
-    </script>
+    <script src="mailsend.js"></script>
       <!-- load angular -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
@@ -59,7 +51,7 @@
       <center><h2>COMING SOON</h2></center>
       <center><h1><span id="lettergap">TANDOOR</span> <br><span id="atthe">at the</span> CHAMBERS</h1></center>
       <center><a><button class="btn btn-lg" data-toggle="modal" data-target="#visionModal">Our Vision</button>
-        <center><button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Contact Us</button></a></center>
+        <center><button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Contact Us</button></center>
         <center><button class="btn btn-lg" data-toggle="modal" data-target="#findusModal">Find Us</button></a></center>
     </div>
     <!-- PAGE CONTENT -->
@@ -116,18 +108,18 @@
 <form method="POST" name="contactform" action="mailsend.php" id="myForm">
     <div class="form-group">
         <label for='name'>Name:</label>
-        <input type="text" class="form-control" name="name" id="name">
-        <label class="error" for="name" id="name_error">This field is required.</label>
+        <input type="text" class="form-control" name="name" id="name" ng-model="nameInput" required>
+      
     </div>
     <div class="form-group">
         <label for='email'>Email Address:</label>
-        <input type="text" name="email" id="email" class="form-control">
-        <label class="error" for="email" id="email_error">This field is required.</label>
+        <input type="email" name="email" id="email" class="form-control" ng-model="emailInput" required>
+
     </div>
     <div class="form-group">
         <label for='message'>Message:</label>
-        <textarea name="message" id="message" class="form-control" rows="5"></textarea>
-        <label class="error" for="phone" id="phone_error">This field is required.</label>
+        <textarea name="message" id="message" class="form-control" rows="5" ng-model="messageInput" required></textarea>
+
     </div>
     <button type="submit" id="submit_btn" class="btn btn-primary" value="Submit">Submit</button>
 </form>
