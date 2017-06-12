@@ -307,7 +307,7 @@ hr {
   color: white;
   /*background-color: #49526C;*/
   z-index: 2;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 .myfooter a {
@@ -349,4 +349,21 @@ hr {
 
 .address {
   margin-top: 20px;
+}
+
+.pagebuttons li{
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+}
+.smlogos li {
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  margin: 20px 20px 0px 20px;
+
+}
+.smlogos img {
+  max-width: 50px;
 }
