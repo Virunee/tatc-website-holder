@@ -14,7 +14,17 @@
 
       <!-- Load jQuery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://malsup.github.com/jquery.form.js"></script>
 
+    <script>
+        // wait for the DOM to be loaded
+        $(document).ready(function() {
+            // bind 'myForm' and provide a simple callback function
+            $('#myForm').ajaxForm(function() {
+                alert("Thank you for your comment!");
+            });
+        });
+    </script>
       <!-- load angular -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
@@ -49,7 +59,8 @@
       <center><h2>COMING SOON</h2></center>
       <center><h1><span id="lettergap">TANDOOR</span> <br><span id="atthe">at the</span> CHAMBERS</h1></center>
       <center><a><button class="btn btn-lg" data-toggle="modal" data-target="#visionModal">Our Vision</button>
-        <button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Find Us</button></a></center>
+        <center><button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Contact Us</button></a></center>
+        <center><button class="btn btn-lg" data-toggle="modal" data-target="#findusModal">Find Us</button></a></center>
     </div>
     <!-- PAGE CONTENT -->
     </div>
@@ -98,70 +109,31 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">FIND US</h4>
+        <h4 class="modal-title">CONTACT US</h4>
       </div>
-
       <div class="modal-body">
-
-        <div class="row">
-          <div class="col-md-8">
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: 51.626017, lng: 0.035804};
-
-        var mapProp= {
-          center:new google.maps.LatLng(51.626017,0.035804),
-          zoom:5,
-        };
-
-        var map = new google.maps.Map(document.getElementById('map'), mapProp);
-
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjOIrQ9-HdlnoD5aYav0NXH-bKZH_KPIk&callback=initMap">
-    </script>
-    <p class="address text-center">
-    The Bank Chambers<br>
-    188 Queens Road<br>
-    Buckhurst Hill<br>
-    Essex IG9 9BD</p>
-  </div>
-  <div class="col-md-4">
-
-    <h4>Drop us a message</h4>
     <!-- CONTACT FORM -->
-    <form method="post" name="contactform" ng-submit="addMessage(messages)">
+<form method="POST" name="contactform" action="mailsend.php" id="myForm">
     <div class="form-group">
-  <label for="usr">Name:</label>
-  <input type="text" class="form-control" id="usr" ng-model="messages.name">
-</div>
-<div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email"  ng-model="messages.email">
-  </div>
-<div class="form-group">
-  <label for="message">Message:</label>
-  <textarea class="form-control" rows="5" id="message" ng-model="messages.message"></textarea>
-</div>
-<button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
-
-<div class="alert" ng-show="contactform.$submitted">
-  <h4>Thanks</h4>
-  <p>We've received your message. We will endeavour to get back to you shortly!</p>
-  </div>
-
+        <label for='name'>Name:</label>
+        <input type="text" class="form-control" name="name" id="name">
+        <label class="error" for="name" id="name_error">This field is required.</label>
+    </div>
+    <div class="form-group">
+        <label for='email'>Email Address:</label>
+        <input type="text" name="email" id="email" class="form-control">
+        <label class="error" for="email" id="email_error">This field is required.</label>
+    </div>
+    <div class="form-group">
+        <label for='message'>Message:</label>
+        <textarea name="message" id="message" class="form-control" rows="5"></textarea>
+        <label class="error" for="phone" id="phone_error">This field is required.</label>
+    </div>
+    <button type="submit" id="submit_btn" class="btn btn-primary" value="Submit">Submit</button>
 </form>
+</div>
     <!-- /CONTACT FORM -->
 
-
-  </div>
-</div> <!-- /row -->
 
       </div>
 
@@ -169,7 +141,6 @@
     </div>
 
   </div>
-</div>
 
 <!-- /Contact modal -->
 
