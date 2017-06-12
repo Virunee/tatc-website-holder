@@ -365,5 +365,35 @@ hr {
 
 }
 .smlogos img {
-  max-width: 50px;
+  max-width: 60px;
+  padding: 10px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+       -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+           transition: all 0.5s linear;
+}
+
+.smlogos img:hover {
+  border-bottom: 3px solid #dbb65c;
+}
+
+/* FORM */
+.form-control {
+  border-radius: 0px;
+}
+
+form #submit_btn {
+  border-radius: 0px;
+  background: transparent;
+  border-color: #dbb65c;
+  color: #dbb65c
+}
+
+form #submit_btn:hover {
+  border-radius: 0px;
+  background: transparent;
+  border-color: white;
+  color: white;
 }

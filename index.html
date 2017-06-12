@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html ng-app="tatcTemp" ng-controller="contactController">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tandoor at the Chambers</title>
-    <meta charset="UTF-8">
-    <!-- load Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel='stylesheet' href='mystyle.css'/>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Unica+One" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tandoor at the Chambers</title>
+  <meta charset="UTF-8">
+  <!-- load Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel='stylesheet' href='mystyle.css'/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Unica+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
 
-      <!-- Load jQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script src="http://malsup.github.com/jquery.form.js"></script>
+  <!-- Load jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script>
 
-    <script src="mailsend.js"></script>
-      <!-- load angular -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
-      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="mailsend.js"></script>
+  <!-- load angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
 
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-      <script src="app.js"></script>
+  <script src="app.js"></script>
 
-  </head>
-  <!-- navbar -->
-  <body>
+</head>
+<!-- navbar -->
+<body>
 
-    <header>
+  <header>
 
-    </header>
+  </header>
 
-    <div id="background-carousel">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="item active" style="background-image:url(images/image1.jpeg)"></div>
-            <div class="item" style="background-image:url(images/image2.jpeg)"></div>
-            <div class="item" style="background-image:url(images/image3.jpeg)"></div>
-          </div>
-        </div>
+  <div id="background-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image:url(images/image1.jpeg)"></div>
+        <div class="item" style="background-image:url(images/image2.jpeg)"></div>
+        <div class="item" style="background-image:url(images/image3.jpeg)"></div>
+      </div>
     </div>
+  </div>
 
-    <div id="content-wrapper">
+  <div id="content-wrapper">
     <!-- PAGE CONTENT -->
     <div class='home-page'>
       <center><h2>COMING SOON</h2></center>
@@ -59,17 +59,111 @@
           <button class="btn btn-lg" data-toggle="modal" data-target="#contactModal">Contact Us</button>
         </li>
         <li>
-        <button class="btn btn-lg" data-toggle="modal" data-target="#findusModal">Find Us</button>
-      </li>
-    </ul>
+          <button class="btn btn-lg" data-toggle="modal" data-target="#findusModal">Find Us</button>
+        </li>
+      </ul>
 
-    <ul class="smlogos text-center">
-      <li><img src="images/twitterlogo.png"/></li>
-      <li><img src="images/facebooklogo.png"/></li>
-      <li><img src="images/instagramlogo.png"/></li>
-    </ul>
+      <ul class="smlogos text-center">
+        <li><a href="https://twitter.com/tandoorchambers" target="_blank"><img src="images/twitterlogo.png"/></a></li>
+        <li><a href="https://m.facebook.com/TandoorattheChambers/" target="_blank"><img src="images/facebooklogo.png"/></a></li>
+        <li><a href="https://www.instagram.com/tandooratthechambers/" target="_blank"><img src="images/instagramlogo.png"/></a></li>
+      </ul>
     </div>
     <!-- PAGE CONTENT -->
+  </div>
+
+  <script>
+  $('#myCarousel').carousel({
+    pause: 'none'
+  })
+  </script>
+
+  <!-- MODALS -->
+  <!-- Vision Modal -->
+  <div id="visionModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">OUR VISION</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /Vision modal -->
+
+  <!-- Contact modal -->
+  <div id="contactModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">CONTACT US</h4>
+        </div>
+        <div class="modal-body">
+          <!-- CONTACT FORM -->
+          <form method="POST" name="contactform" action="mailsend.php" id="myForm">
+            <div class="form-group">
+              <label for='name'>Name:</label>
+              <input type="text" class="form-control" name="name" id="name" ng-model="nameInput" required>
+
+            </div>
+            <div class="form-group">
+              <label for='email'>Email Address:</label>
+              <input type="email" name="email" id="email" class="form-control" ng-model="emailInput" required>
+
+            </div>
+            <div class="form-group">
+              <label for='message'>Message:</label>
+              <textarea name="message" id="message" class="form-control" rows="5" ng-model="messageInput" required></textarea>
+
+            </div>
+            <center><button type="submit" id="submit_btn" class="btn btn-primary" value="Submit">Submit</button></center>
+          </form>
+        </div>
+        <!-- /CONTACT FORM -->
+      </div>
+    </div>
+  </div>
+  <!-- /Contact modal -->
+  <div id="findusModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">FIND US</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-8">
+              <iframe width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJB3cT5-Wg2EcRZTUeC2zohV4&key=AIzaSyCIw30OUUAk7REM59eYVUd423R00yGRtAw" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-4">
+              <p class="address">
+                The Bank Chambers<br>
+                188 Queens Road<br>
+                Buckhurst Hill<br>
+                Essex IG9 9BD</p>
+                <hr/>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -79,125 +173,5 @@
 
     <!-- /FOOTER -->
 
-    <script>
-    $('#myCarousel').carousel({
-       pause: 'none'
-    })
-    </script>
-
-    <!-- MODALS -->
-      <!-- Vision Modal -->
-    <div id="visionModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">OUR VISION</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-    <!-- /Vision modal -->
-
-    <!-- Contact modal -->
-    <div id="contactModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">CONTACT US</h4>
-      </div>
-      <div class="modal-body">
-    <!-- CONTACT FORM -->
-<form method="POST" name="contactform" action="mailsend.php" id="myForm">
-    <div class="form-group">
-        <label for='name'>Name:</label>
-        <input type="text" class="form-control" name="name" id="name" ng-model="nameInput" required>
-
-    </div>
-    <div class="form-group">
-        <label for='email'>Email Address:</label>
-        <input type="email" name="email" id="email" class="form-control" ng-model="emailInput" required>
-
-    </div>
-    <div class="form-group">
-        <label for='message'>Message:</label>
-        <textarea name="message" id="message" class="form-control" rows="5" ng-model="messageInput" required></textarea>
-
-    </div>
-    <button type="submit" id="submit_btn" class="btn btn-primary" value="Submit">Submit</button>
-</form>
-</div>
-    <!-- /CONTACT FORM -->
-
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-<!-- /Contact modal -->
-<div id="findusModal" class="modal fade" role="dialog">
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">FIND US</h4>
-  </div>
-  <div class="modal-body">
-    <div class="row">
-      <div class="col-md-8">
-        <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: 51.626017, lng: 0.035804};
-
-        var mapProp= {
-          center:new google.maps.LatLng(51.626017,0.035804),
-          zoom:5,
-        };
-
-        var map = new google.maps.Map(document.getElementById('map'), mapProp);
-
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjOIrQ9-HdlnoD5aYav0NXH-bKZH_KPIk&callback=initMap">
-    </script>
-
-  </div>
-  <div class="col-md-4">
-    <p class="address">
-    The Bank Chambers<br>
-    188 Queens Road<br>
-    Buckhurst Hill<br>
-    Essex IG9 9BD</p>
-  </div>
-</div>
-
-
-  </div>
-
-</div>
-</div>
-</div>
-
   </body>
-</html>
+  </html>
