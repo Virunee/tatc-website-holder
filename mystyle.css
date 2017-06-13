@@ -23,7 +23,7 @@ position:relative;
   font-family: 'Unica One', sans-serif;
   font-size: 1.5em;
   display: inline-block;
-  color: #dbb65c !important;
+  color: #af7447 !important;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -43,7 +43,7 @@ position:relative;
 
 .navbar-default .navbar-nav>li>a:hover {
   color: white;
-  border: 1px solid #dbb65c;
+  border: 1px solid #af7447;
 
 }
 
@@ -67,14 +67,14 @@ position:relative;
 }
 
 .home-page .btn:hover {
-  color: #dbb65c;
-  border: 2px solid #dbb65c;
+  color: #af7447;
+  border: 2px solid #af7447;
 }
 
 .home-page  h1 {
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  color: #dbb65c;
+  color: #af7447;
   font-size: 8em;
   text-shadow: 1px 1px 10px black;
   text-align: center;
@@ -103,7 +103,7 @@ position:relative;
 div .page-header h3 {
   display: inline-block;
   padding-left: 20px;
-  color: #dbb65c;
+  color: #af7447;
   font-family: 'Unica One', sans-serif;
 }
 
@@ -122,7 +122,7 @@ div .page-header h3 span {
   .collapsing, .in {background-color: rgb(61, 69, 90);}
   .tab-content>.active {background-color: rgba(61, 69, 90,0);}
   .collapsing ul li a:hover, .in ul li a:hover {
-    color: #dbb65c!important;
+    color: #af7447!important;
     background-color: #525D7A!important;
   border: 1px solid transparent !important;}
 
@@ -139,6 +139,15 @@ div .page-header h3 span {
   body {
     font-size: 1em !important;
   }
+
+  .modal-backdrop.fade {
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+opacity: 0.5;
+filter: alpha(opacity=50);
+}
 }
 
 .page-header {
@@ -174,7 +183,7 @@ div .page-header h3 span {
 }
 
 #menu-title {
-  color: #dbb65c;
+  color: #af7447;
   font-size: 6em;
   padding: 20px;
   text-align: center;
@@ -195,7 +204,7 @@ hr {
 }
 
 .tab-content h3 {
-  color: #dbb65c;
+  color: #af7447;
   text-transform: uppercase;
 }
 
@@ -212,7 +221,7 @@ hr {
 }
 
 .nav-pills>li>a:hover {
-  border: 1px solid #dbb65c;
+  border: 1px solid #af7447;
   background-color: transparent !important;
 }
 
@@ -311,11 +320,11 @@ hr {
 }
 
 .myfooter a {
-  color: #dbb65c;
+  color: #af7447;
 }
 
 .myfooter a:hover {
-  color: #A78941;
+  color: #8f6444;
   text-decoration: none;
 }
 
@@ -327,11 +336,11 @@ hr {
 
 .modal-header {
   background-color: #3B4154;
-    border-color: #dbb65c;
+    border-color: #af7447;
 }
 
 .modal-title {
-  color: #dbb65c;
+  color: #af7447;
 }
 
 .close {
@@ -376,7 +385,7 @@ hr {
 }
 
 .smlogos img:hover {
-  border-bottom: 3px solid #dbb65c;
+  border-bottom: 3px solid #af7447;
 }
 
 /* FORM */
@@ -387,8 +396,8 @@ hr {
 form #submit_btn {
   border-radius: 0px;
   background: transparent;
-  border-color: #dbb65c;
-  color: #dbb65c
+  border-color: #af7447;
+  color: #af7447
 }
 
 form #submit_btn:hover {
