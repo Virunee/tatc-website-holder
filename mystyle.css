@@ -140,14 +140,9 @@ div .page-header h3 span {
     font-size: 1em !important;
   }
 
-  .modal-backdrop.fade {
-opacity: 0;
-filter: alpha(opacity=0);
-}
-.modal-backdrop.in {
-opacity: 0.5;
-filter: alpha(opacity=50);
-}
+  .collapsing, .in {
+    background-color: rgba(0, 0, 0,0.5)
+  }
 }
 
 .page-header {
