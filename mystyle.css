@@ -73,7 +73,7 @@ position:relative;
 
 .home-page  h1 {
   display: inline-block;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato Heavy', sans-serif;
   color: #af7447;
   font-size: 8em;
   text-shadow: 1px 1px 10px black;
@@ -133,9 +133,14 @@ div .page-header h3 span {
 
   #atthe{
     bottom: -15px !important;
-    right: -5px !important;
+    right: 0px !important;
     text-transform: uppercase !important;
   }
+
+  #lettergap {
+    letter-spacing: 8px!important;
+  }
+
   body {
     font-size: 1em !important;
   }
@@ -299,7 +304,7 @@ hr {
   vertical-align: text-top;
   position: relative;
   bottom: -25px;
-  right: -20px;
+  right: -10px;
 }
 
 .myfooter {
@@ -336,6 +341,10 @@ hr {
 
 .modal-title {
   color: #af7447;
+}
+
+.modal-footer {
+  border-color: #af7447;
 }
 
 .close {
