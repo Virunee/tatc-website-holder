@@ -148,6 +148,14 @@ div .page-header h3 span {
   .collapsing, .in {
     background-color: rgba(0, 0, 0,0.5)
   }
+
+  .myfooter {
+    position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+
+  }
 }
 
 .page-header {
@@ -308,11 +316,9 @@ hr {
 }
 
 .myfooter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: 100
   padding: 1rem;
+  margin: 10px;
   color: white;
   /*background-color: #49526C;*/
   z-index: 2;
@@ -386,6 +392,7 @@ hr {
        -ms-transition: all 0.5s linear;
         -o-transition: all 0.5s linear;
            transition: all 0.5s linear;
+           margin-bottom: 20px;
 }
 
 .smlogos img:hover {
