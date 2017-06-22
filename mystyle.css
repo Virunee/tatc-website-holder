@@ -116,8 +116,9 @@ div .page-header h3 span {
 @media (max-width:700px) {
 
   .home-page h1 {
-    font-size: 5em;
+    font-size: 4.5em;
     text-transform: uppercase !important;
+
   }
   .collapsing, .in {background-color: rgb(61, 69, 90);}
   .tab-content>.active {background-color: rgba(61, 69, 90,0);}
@@ -154,7 +155,14 @@ div .page-header h3 span {
    right: 0;
    bottom: 0;
    left: 0;
+  }
 
+  .home-page h2 {
+    font-size: 2em;
+  }
+
+  ul {
+    padding: 0px !important;
   }
 }
 
